@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/t_promo_white_50"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context=".MainActivity">
+
+    <com.rahullohra.shadow.CardConstraintLayout
+        android:id="@+id/couponView"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/t_promo_white"
+        android:padding="10dp"
+        app:blurRadius="8dp"
+        app:cornerRadius="8dp"
+        app:shadowBottomOffset="-2dp"
+        app:shadowEndOffset="0dp"
+        app:shadowStartOffset="0dp"
+        app:shadowTopOffset="0dp"
+        tools:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hellosdaw"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.rahullohra.shadow.CardConstraintLayout>
+
+</LinearLayout>

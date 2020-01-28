@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="t_promo_borderColor">#50000000</color>
+    <color name="t_promo_halfCircleColor">#FAFAFA</color>
+    <color name="t_promo_toastColor">#FAFAFA</color>
+    <color name="t_promo_btn_green">#03ac0e</color>
+    <color name="t_promo_grey96">#f531353b</color>
+    <color name="t_promo_grey68">#ae31353b</color>
+    <color name="t_promo_white_50">#50FAFAFA</color>
+    <color name="t_promo_white">#FAFAFA</color>
+    <color name="t_promo_toast_96">#f531353b</color>
+</resources>
