@@ -109,21 +109,22 @@ open class CardConstraintLayout : ConstraintLayout {
             drawShadow(canvas)
         }
         drawRectBackground(canvas)
-        if (enableBorder) {
-            drawBorder(canvas)
-        }
+//        if (enableBorder) {
+//            drawBorder(canvas)
+//        }
         super.onDraw(canvas)
     }
 
     private fun drawBorder(canvas: Canvas) {
 
-        val borderColor = ContextCompat.getColor(context, R.color.t_promo_borderColor)
+//        val borderColor = ContextCompat.getColor(context, R.color.t_promo_btn_green)
+        val borderColor = Color.WHITE
 
         borderPaint.style = Paint.Style.STROKE
         borderPaint.color = borderColor
-        borderPaint.strokeWidth = 0.5f
+        borderPaint.strokeWidth = 10.5f
 
-        borderRectF.top = height - borderHeight
+        borderRectF.top = 0f
         borderRectF.left = 0f
         borderRectF.right = width.toFloat()
         borderRectF.bottom = height.toFloat()
@@ -134,12 +135,12 @@ open class CardConstraintLayout : ConstraintLayout {
     private fun drawRectBackground(canvas: Canvas) {
 
         rectPaint.style = Paint.Style.FILL
-        rectPaint.color = Color.WHITE
+        rectPaint.color = Color.YELLOW
         rectPaint.xfermode = porterDuffXfermode
         rectBackgroundRectF.top = 0f
-        rectBackgroundRectF.left = 0f
-        rectBackgroundRectF.right = width.toFloat()
-        rectBackgroundRectF.bottom = height.toFloat()
+        rectBackgroundRectF.left = 0f + 20f
+        rectBackgroundRectF.right = width.toFloat() - 20f
+        rectBackgroundRectF.bottom = height.toFloat() - 20f
         rectBackgroundPath.reset()
         rectBackgroundPath.addRect(rectBackgroundRectF, Path.Direction.CW)
         canvas.drawRoundRect(rectBackgroundRectF, cornerRadius, cornerRadius, rectPaint)
@@ -159,6 +160,10 @@ open class CardConstraintLayout : ConstraintLayout {
         if (shadowStartY == java.lang.Float.MIN_VALUE) {
             shadowStartY = (height / 2).toFloat()
         }
+
+        shadowBottomOffset = -20f
+        shadowStartOffset = 20f
+        shadowEndOffset = -20f
 
         shadowPath.reset()
         shadowPath.moveTo((width + (shadowEndOffset)), shadowStartY + shadowTopOffset)               //Top Right
